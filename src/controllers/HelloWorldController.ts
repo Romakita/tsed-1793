@@ -17,4 +17,8 @@ export class HelloWorldController {
 
     throw error;
   }
+  @Get("/does_not_work")
+  doesNotWork() {
+    return "This method also returns 404 but it should not";
+  }
 }

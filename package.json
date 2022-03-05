@@ -1,0 +1,53 @@
+{
+  "name": "tsed-1793",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "yarn run tsc --project tsconfig.compile.json",
+    "build:w": "tsc --project tsconfig.compile.json -w",
+    "start": "tsnd --inspect --ignore-watch node_modules --respawn --transpile-only -r tsconfig-paths/register src/index.ts",
+    "start:prod": "cross-env NODE_ENV=production node dist/index.js"
+  },
+  "dependencies": {
+    "@tsed/ajv": "^6.103.2",
+    "@tsed/common": "^6.103.2",
+    "@tsed/core": "^6.103.2",
+    "@tsed/di": "^6.103.2",
+    "@tsed/engines": "^1.1.5",
+    "@tsed/exceptions": "^6.103.2",
+    "@tsed/json-mapper": "^6.103.2",
+    "@tsed/logger": "^6.1.0",
+    "@tsed/logger-file": "^6.1.0",
+    "@tsed/platform-express": "^6.103.2",
+    "@tsed/schema": "^6.103.2",
+    "@tsed/swagger": "^6.103.2",
+    "ajv": "^8.10.0",
+    "body-parser": "^1.19.2",
+    "compression": "^1.7.4",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "method-override": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/compression": "^1.7.2",
+    "@types/cookie-parser": "^1.4.2",
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.13",
+    "@types/method-override": "^0.0.32",
+    "@types/multer": "^1.4.7",
+    "@types/node": "^17.0.21",
+    "ts-node": "^10.6.0",
+    "ts-node-dev": "^1.1.8",
+    "tsconfig-paths": "^3.13.0",
+    "tslib": "^2.3.1",
+    "typescript": "^4.6.2"
+  },
+  "tsed": {
+    "packageManager": "yarn",
+    "convention": "default",
+    "architecture": "default"
+  }
+}
